@@ -28,13 +28,11 @@ fetch(req)
   }
 })
 .then((data) => {
-  console.log(data);
     catsArr = data.cats;
     catsOriginalArray = [...catsArr];
     printCats();
 })
 .catch((err) => {
-  console.log(err);
   console.log("Error:", err.message);
 });
 
@@ -53,7 +51,6 @@ function muchCute() {
 function notCute() {
   catsArr.sort((a, b) => {
     return a.cutenessLevel - b.cutenessLevel;
-    console.log(a.cutenessLevel + 'Sooo cute!');
   })
   printCats();
 }
